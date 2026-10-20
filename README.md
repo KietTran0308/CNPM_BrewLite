@@ -1,6 +1,4 @@
-# BrewLite - phiên bản dễ hiểu cho đồ án Công nghệ Phần mềm
-
-Đây là **bản xây dựng lại từ dữ liệu và ý tưởng BrewLite bạn cung cấp** nhằm học và demo, không phải bản vá giữ nguyên tất cả giao diện cũ. Đúng kiến trúc giảng viên yêu cầu: **Next.js + NestJS + PostgreSQL (Prisma) + Docker Compose**. Có 32 sản phẩm và hình gốc được nén nhẹ; chức năng MVP: menu, size/topping, giỏ hàng, JWT, tạo đơn, thanh toán Ví/Thẻ mô phỏng, xác nhận, lịch sử đơn. Chỉ có **3 dependency frontend chính: next, react, react-dom** (Tailwind + TypeScript là công cụ xây dựng).
+# BrewLite
 
 ## 1. Cách chạy dễ nhất - Docker Desktop
 
@@ -82,8 +80,7 @@ BrewLite_DeHieu_Fullstack/
 
 **Đọc `docs/01-HUONG-DI-CUA-CODE.md` để lần theo flow đặt hàng từng bước**; đọc `docs/02-API.md` để test POST với Postman.
 
-## 4. Demo theo đúng thứ tự trên lớp
-
+## Thứ tự chạy:
 1. Mở menu: tìm các món, chọn size/topping, thêm 2 món vào giỏ.
 2. Mở giỏ: tăng/giảm số lượng và nhìn tổng tiền.
 3. Đăng ký: email chưa dùng + mật khẩu tối thiểu 6 ký tự; đăng nhập.
@@ -122,5 +119,3 @@ npm run smoke
 Script `backend/scripts/smoke.mjs` tự tạo tài khoản thử (email ngẫu nhiên), lấy menu, đặt đơn, trả tiền giả lập, gửi lại cùng Idempotency-Key và đọc lịch sử. Nó tạo dữ liệu thật trong DB phát triển; **không chạy trên production**. Nếu in `SMOKE TEST PASSED!`, các API chính đã chạy trong môi trường của bạn. Đây là **script được cung cấp để bạn tự chạy**, chưa được thực thi end-to-end trong môi trường soạn file.
 
 ## 8. Scrum theo đề bài
-
-Xem `docs/03-SCRUM-CHECKLIST.md` để đối chiếu 10 task trong 3 Sprint; file đó không thay thế biên bản họp, commit, test và bản demo mà nhóm phải tự thực hiện.
